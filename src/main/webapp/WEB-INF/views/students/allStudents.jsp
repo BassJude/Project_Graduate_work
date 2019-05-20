@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: adam
-  Date: 18.05.19
-  Time: 20:58
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -16,7 +9,7 @@
     <a href="${pageContext.request.contextPath}/">START</a>
 </div>
 <div>
-    Lista studentów
+    Lista stopni naukowych
 
 
 </div>

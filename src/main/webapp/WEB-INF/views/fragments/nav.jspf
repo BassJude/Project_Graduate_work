@@ -7,3 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div>Nawigacja</div>
+<div>
+    <a href="${pageContext.request.contextPath}/">START</a>
+</div>
+<div>
+    <a href="${pageContext.request.contextPath}/allStudents">Lista studentów</a>
+</div>
+<div>
+    <a href="${pageContext.request.contextPath}/addStudent">Dodaj studenta</a>
+</div>
+<div>
+    <a href="${pageContext.request.contextPath}/allResearchDegree">Lista stopni naukowych</a>
+</div>

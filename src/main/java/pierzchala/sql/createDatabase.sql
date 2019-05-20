@@ -1,11 +1,18 @@
 CREATE DATABASE bassjude_dyplomy CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+DROP DATABASE bassjude_dyplomy;
+
 value="drop-and-create"/>
         value="update"/>
 
+ALTER TABLE studenci MODIFY numer_indeksu varchar(10) UNIQUE NOT NULL;
+ALTER TABLE studenci MODIFY imie varchar(50) NOT NULL;
+ALTER TABLE studenci MODIFY nazwisko varchar(100) NOT NULL;
 
-INSERT INTO `students` (`numer_indeksu`, `imie`, `nazwisko`) VALUES
-('1234567890', 'Adam', 'Pierzchała'),
+ALTER TABLE stopien_naukowy MODIFY nazwa varchar(50) NOT NULL;
+
+INSERT INTO `studenci` (`numer_indeksu`, `imie`, `nazwisko`) VALUES
+('0000000000', 'Adam', 'Pierzchała'),
 ('0000000001', 'Piotr', 'Fronczewski'),
 ('0000000002', 'Andrzej', 'Duda'),
 ('0000000003', 'Mikołaj', 'Iksiński'),
@@ -26,3 +33,10 @@ INSERT INTO `students` (`numer_indeksu`, `imie`, `nazwisko`) VALUES
 ('0000000018', 'Stanisław', 'Górka'),
 ('0000000019', 'Bartosz', 'Gelner'),
 ('0000000020', 'Janina', 'Górecka');
+
+INSERT INTO `stopien_naukowy` (`nazwa`) VALUES
+('profesor'),
+('doktor'),
+('magister'),
+('inżynier'),
+('licencjat');

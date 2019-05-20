@@ -11,12 +11,7 @@
 <%@ include file="/WEB-INF/views/fragments/head.jspf" %>
 <body>
 <%@ include file="/WEB-INF/views/fragments/nav.jspf" %>
-<div>
-    <a href="${pageContext.request.contextPath}/">START</a>
-</div>
-<div>
-    <a href="${pageContext.request.contextPath}/allStudents">Lista studentów</a>
-</div>
+
 <div style="height: 500px">
     Działam !!!
 

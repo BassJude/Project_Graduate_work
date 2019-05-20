@@ -1,7 +1,6 @@
 package pierzchala.model;
 
 
-
 import org.hibernate.validator.constraints.NotBlank;
 import pierzchala.validator.EditValidator;
 import pierzchala.validator.RegistrationValidator;
@@ -10,31 +9,30 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "students")
+@Table(name = "studenci")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_studenta;
 
+
+    //    @Size(max = 10, message = "Długość maksymalnie 10 znaków", groups = {RegistrationValidator.class, EditValidator.class})
+//    @NotBlank(groups = {RegistrationValidator.class, EditValidator.class})
     @Column(length = 10)
-    @Size(max = 10, message = "Długość maksymalnie 10 znaków", groups = {RegistrationValidator.class, EditValidator.class})
-    @NotBlank(groups = {RegistrationValidator.class, EditValidator.class})
     @JoinColumn(unique =true)
-    private  String numer_indeksu;
+    private String numer_indeksu;
 
     @Column(length = 50)
     @Size(max = 50, message = "Długość maksymalnie 50 znaków", groups = {RegistrationValidator.class, EditValidator.class})
-    @NotBlank(groups = {RegistrationValidator.class, EditValidator.class})
-    String imie;
+    @NotBlank(groups = {RegistrationValidator.class, EditValidator.class}, message = "Wpisz imie")
+    private String imie;
 
     @Column(length = 100)
     @Size(max = 100, message = "Długość maksymalnie 100 znaków", groups = {RegistrationValidator.class, EditValidator.class})
-    @NotBlank(groups = {RegistrationValidator.class, EditValidator.class})
-    String nazwisko;
+    @NotBlank(groups = {RegistrationValidator.class, EditValidator.class}, message = "Wpisz nazwisko")
+    private String nazwisko;
 
-    public Student() {
-    }
 
     public Long getId_studenta() {
         return id_studenta;
