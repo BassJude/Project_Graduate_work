@@ -86,4 +86,33 @@ public class HomeController {
         return "/ResearchDegree/allResearchDegree";
     }
 
+    @GetMapping("/addResearchDegree")
+    public String addResearchDegree(Model model) {
+        model.addAttribute("researchDegree", new ResearchDegree());
+        return "/ResearchDegree/addResearchDegree";
+    }
+
+    @PostMapping("/addResearchDegree")
+    public String addResearchDegree(@Validated(RegistrationValidator.class) ResearchDegree researchDegree, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            return "/ResearchDegree/addResearchDegree";
+        }
+        researchDegreeService.save(researchDegree);
+        return "forward:/allResearchDegree";
+    }
+    @GetMapping("editResearchDegree/{id}")
+    public String editResearchDegree(@PathVariable Long id, Model model) {
+        model.addAttribute("researchDegree",researchDegreeService.findById(id));
+        return "/ResearchDegree/addResearchDegree";
+    }
+    @PostMapping("editResearchDegree/{id}")
+    public String editResearchDegree(@Validated(EditValidator.class) ResearchDegree researchDegree, BindingResult result, @PathVariable Long id) {
+        if (result.hasErrors()) {
+            return "/ResearchDegree/addResearchDegree";
+        }
+        researchDegree.setId_stopnia(researchDegreeService.findById(id).getId_stopnia());
+        researchDegreeService.update(researchDegree);
+        return "forward:/allResearchDegree";
+    }
+
 }

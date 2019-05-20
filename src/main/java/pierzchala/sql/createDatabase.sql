@@ -40,3 +40,27 @@ INSERT INTO `stopien_naukowy` (`nazwa`) VALUES
 ('magister'),
 ('inżynier'),
 ('licencjat');
+
+INSERT INTO `pracownik` (`id_stopnia`, `imie`, `nazwisko`) VALUES
+(1, 'Jan', 'Kowalski'),
+(2,  'Michał', 'Iksiński'),
+(1,  'Jan', 'Nowicki'),
+(1,  'Mateusz', 'Malinowski'),
+(2,  'Andrzej', 'Sapkowski'),
+(2,  'Maria', 'Ekier'),
+(1,  'Jan', 'Kochanowski'),
+(2,  'Adam','Mickiewicz'),
+(1,  'Jan','Ostroróg'),
+(1,  'Stanisław', 'Sarnicki'),
+(1,  'Anna', 'Nakwaska'),
+(1,  'Celina', 'Gładkowska'),
+(1,  'Ludmiła', 'Grygiel'),
+(1,  'Maria', 'Czerkawska'),
+(1,  'Beata', 'Chomątowska'),
+(1,  'Wanda', 'Brońska'),
+(1,  'Weronika', 'Gogola'),
+(1,  'Wanda', 'Dynowska'),
+(1,  'Franciszek', 'Baytel'),
+(2,  'Michał', 'Becela'),
+(2,  'Jadwiga', 'Apostoł'),
+(2,  'Stanisław', 'Dobosiewicz');

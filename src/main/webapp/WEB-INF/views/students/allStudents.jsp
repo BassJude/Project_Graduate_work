@@ -5,9 +5,7 @@
 <%@ include file="/WEB-INF/views/fragments/head.jspf" %>
 <body>
 <%@ include file="/WEB-INF/views/fragments/nav.jspf" %>
-<div>
-    <a href="${pageContext.request.contextPath}/">START</a>
-</div>
+
 <div>
     Lista stopni naukowych
 
